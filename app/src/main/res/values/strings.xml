@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Weather Dial</string>
+    <string name="currentPlace">TianJin</string>
+    <string name="returnKey">  ＜ 返回 </string>
+    <string name="localTimeTitle">Local Time</string>
+    <string name="localTime">22:54</string>
+    <string name="degreesTitle">Degrees</string>
+    <string name="degrees">21°C</string>
+    <string name="windTitle">Wind</string>
+    <string name="wind">3</string>
+    <string name="rainTitle">Rain</string>
+    <string name="rain">80%</string>
+    <string name="tourTitle">天津周邓纪念馆</string>
+    <string name="tourAddress">地址：66666666</string>
+    <string name="tourIntro">简介：。。。。。。。。</string>
+    <string name="tourTime">法定节假日？</string>
+    <string name="blank">                   </string>
+
+    <string name="patternCityReplace">市</string>
+    <string name="patternCity">(.*?)市</string>
+</resources>

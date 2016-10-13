@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/tourAct"
+        android:title="旅游推荐"/>
+    <item
+        android:id="@+id/share"
+        android:title="气候分享"/>
+    <item
+        android:id="@+id/voice"
+        android:title="语音播报"/>
+    <item
+        android:id="@+id/choose"
+        android:title="选择城市"/>
+</menu>

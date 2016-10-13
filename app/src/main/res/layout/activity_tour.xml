@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.wolf.clockgo.TourActivity"
+    android:background="@android:color/background_dark">
+
+    <RelativeLayout
+        android:id="@+id/firstTitle"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:weightSum="1">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/returnKey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/myTColor"
+                android:layout_weight="0.15"
+                android:textSize="32sp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:text="@string/returnKey" />
+
+            <TextView
+                android:id="@+id/currentPlace"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:layout_weight="0.85"
+                android:textColor="@color/myTColor"
+                android:text="@string/currentPlace"
+                android:textIsSelectable="true"
+                android:textSize="32sp"
+                android:orientation="vertical"
+                android:gravity="center"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/fourPart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/firstTitle"
+        android:gravity="center">
+        <LinearLayout
+            android:id="@+id/sumTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:weightSum="1">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:layout_marginLeft="30dp">
+                <TextView
+                    android:id="@+id/aboveTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/myTColor"
+                    android:textSize="24sp"
+                    android:typeface="sans"
+                    android:text="@string/localTimeTitle" />
+                <TextView
+                    android:id="@+id/belowTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/myTColor"
+                    android:layout_below="@id/aboveTime"
+                    android:layout_marginTop="20dp"
+                    android:textSize="30sp"
+                    android:text="@string/localTime" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sumTime"
+            android:weightSum="1">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="0.40">
+
+                <TextView
+                    android:id="@+id/aboveDegrees"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/myTColor"
+                    android:textSize="24sp"
+                    android:text="@string/degreesTitle" />
+
+                <TextView
+                    android:id="@+id/belowDegrees"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/myTColor"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@id/aboveDegrees"
+                    android:textSize="30sp"
+                    android:text="@string/degrees" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="0.3">
+
+                <TextView
+                    android:id="@+id/aboveWind"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/myTColor"
+                    android:textSize="24sp"
+                    android:text="@string/windTitle" />
+
+                <TextView
+                    android:id="@+id/belowWind"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/myTColor"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@id/aboveWind"
+                    android:textSize="30sp"
+                    android:text="@string/wind" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="0.3">
+
+                <TextView
+                    android:id="@+id/aboveRain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/myTColor"
+                    android:textSize="24sp"
+                    android:text="@string/rainTitle" />
+
+                <TextView
+                    android:id="@+id/belowRain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/myTColor"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@id/aboveRain"
+                    android:textSize="30sp"
+                    android:text="@string/rain" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="24dp"
+        android:layout_below="@id/fourPart">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/id_recyclerview"
+            android:divider="#ff000000"
+            android:dividerHeight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+</RelativeLayout>
