@@ -19,6 +19,18 @@
             <meta-data android:name="android.appwidget.provider"
                 android:resource="@xml/zd_appwidget_info"/>
         </receiver>
+        <service
+            android:name=".MyDream"
+            android:exported="true"
+            android:icon="@mipmap/zd"
+            android:label="Weather Dial"
+            android:permission="android.permission.BIND_DREAM_SERVICE">
+            <intent-filter>
+                <action android:name="android.service.dreams.DreamService"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </service>
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

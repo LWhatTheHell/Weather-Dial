@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity implements GestureDetector.O
     private String cityStr;
     private TextView[] botTempText;
     private ImageView tourMenu;
-    private String cityLocation = "117.183,39.15";
+    private String cityLocation = "116.467,39.9";
     private boolean isDay;
     private Bundle cityList;
     private String[] cityListStr=new String[]{"北京","上海","天津","重庆","香港","哈尔滨","齐齐哈尔","牡丹江","北安","伊春","鹤岗","鸡西","佳木斯","双鸭山","爱辉","长春","四平","辽源","通化","吉林","延吉","沈阳","朝阳","锦州","旅大","阜新","营口","本溪","鞍山","辽阳","抚顺","丹东","呼和浩特","赤峰","锡林浩特","包头","通辽","巴彦浩特","海拉尔","牙克石","石家庄","保定","唐山","承德","张家口","沧县","邢台","邯郸","太原","大同","阳泉","榆次","长治","侯马","济南","临沂","聊城","淄博","潍坊","烟台","青岛","郑州","南阳","西安","榆林","延安","铜川","商县","咸阳","宝鸡","安康","汉中","兰州","玉门","白银","定西","天水","临夏","张掖","银川","西宁","苏西克","玉树","乌鲁木齐","哈密","阿勒泰","若羌","昌吉","焉耆","塔城","博乐","伊宁","阿克苏","和田","喀什","合肥","淮南","六安","马鞍山","芜湖","安庆","屯溪","阜阳","南京","连云港","徐州","淮阴","扬州","镇江","常州","南通","无锡","苏州","杭州","湖州","宁波","金华","温州","长沙","常德","湘潭","株洲","吉首","邵阳","衡阳","黔阳","郴州","南昌","九江","庐山","景德镇","上饶","抚州","宜春","萍乡","吉安","赣州","武汉","恩施","黄石","成都","万县","达县","温江","阿坝","内江","马尔康","自贡","乐山","宜宾","南充","康定","甘孜","昭觉","西昌","涪陵","贵阳","遵义","福州","福安","南平","闽侯","三明","龙岩","泉州","漳州","厦门","台北","高雄","广州","韶关","汕头","湛江","海口","南宁","桂林","柳州","梧州","百色","玉林","昆明","大理","下关","潞西","景洪","拉萨","昌都","曼尼","日喀则","亚东","改则","多木拉","噶大克"};    private SpeechSynthesizer mSpeechSynthesizer;
@@ -186,11 +186,6 @@ public class MainActivity extends AppCompatActivity implements GestureDetector.O
                                 timeCondition[i].setImageResource(R.drawable.haze_wl);
                             }
                         }
-                    }
-                    if(tempNowStr==null){
-                        tempNow.setText("Waiting");
-                    }else {
-                        tempNow.setText(tempNowStr + "℃");
                     }
                     break;
                 case 3:
@@ -311,7 +306,11 @@ public class MainActivity extends AppCompatActivity implements GestureDetector.O
                         }
                         botTempText[3+i].setText(di+" "+speed+"km/h");
                     }
-
+                    if(tempNowStr==null){
+                        tempNow.setText("Waiting");
+                    }else {
+                        tempNow.setText(tempNowStr + "℃");
+                    }
                     break;
             }
         }
