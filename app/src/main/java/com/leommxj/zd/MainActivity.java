@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity implements GestureDetector.O
     private Calendar t;
     private TextView tempNow;
     private TextView city;
-    private String cityStr;
+    private String cityStr="北京";
     private TextView[] botTempText;
     private ImageView tourMenu;
     private String cityLocation = "116.467,39.9";
@@ -111,7 +111,11 @@ public class MainActivity extends AppCompatActivity implements GestureDetector.O
                     if (cityStr==null||cityLocation==null){
                         new GetCityThread(handler).start();
                     }
-                    cityStr = (String)msg.obj;
+                    cityStr = (String) msg.obj;
+                    if(cityStr.length()==0){
+                        cityStr="北京";
+                    }
+                    Log.d("fucker",""+cityStr.length());
                     cityLocation = cityList.getString(cityStr);
                     city.setText(cityStr);
                     new GetDayWeatherThread(handler,cityLocation).start();

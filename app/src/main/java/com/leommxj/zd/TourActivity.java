@@ -159,7 +159,8 @@ public class TourActivity extends Activity {
                     temp = (String[]) msg.obj;
                     webIp = temp[0];
                     cityGetName = getStrings(temp[1], Pattern.compile(getString(R.string.patternCity)));
-                    cityAttr[0] = cityName.get(cityGetName);
+                    //cityAttr[0] = cityName.get(cityGetName);
+                    cityAttr[0] = "北京";
                     TextView mCurrentPlace = (TextView) findViewById(R.id.currentPlace);
                     String currentPlace = cityAttr[0];
                     mCurrentPlace.setText(currentPlace);
@@ -267,7 +268,7 @@ public class TourActivity extends Activity {
                         // Tour
                         msg = new Message();
                         msg.what = 3;
-                        urlPathT = "http://123.206.43.159/getJson/handleData.php?month=" + mMonth + "&weather=" + rainy + "&city=" + city;
+                        urlPathT = "http://123.206.43.159/getJson/handleData.php?month=" + mMonth + "&weather=" + rainy + "&city=" + "Beijing";
                         Log.d(TAG, "run: www    " + urlPathT);
                         try {
                             msg.obj = JsonParse.getListTour(urlPathT);

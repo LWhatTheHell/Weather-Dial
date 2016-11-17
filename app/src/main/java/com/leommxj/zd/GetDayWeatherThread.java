@@ -17,10 +17,13 @@ public class GetDayWeatherThread extends Thread {
     public GetDayWeatherThread(Handler h,String c){
         handler=h;
         cityLocation =c;
+        Log.d("hereisproblem",cityLocation);
+        Log.d("hereisproblem2",c);
     }
     @Override
     public void run() {
         super.run();
+        Log.d("hereisproblem3",cityLocation);
         String url = "https://api.caiyunapp.com/v2/T3irj2OIDnEwNdPW/" + cityLocation + "/forecast";
         String urlRealtime = "https://api.caiyunapp.com/v2/T3irj2OIDnEwNdPW/" + cityLocation + "/realtime.json";
         String data = HttpRequestUtil.HttpRequest(url);

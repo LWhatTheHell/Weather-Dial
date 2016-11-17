@@ -42,6 +42,8 @@ class IpUtil {
         address = webContent.substring(startAddress, endAddress);
         ipAttr[0] = ip;
         ipAttr[1] = address;
+        Log.d("wodetian",webContent);
+        Log.d("wodetian",ipAttr[1]);
         return ipAttr;
     }
 }
