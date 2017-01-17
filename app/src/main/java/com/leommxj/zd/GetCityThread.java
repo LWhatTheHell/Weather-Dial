@@ -22,14 +22,14 @@ public class GetCityThread extends Thread {
         try {
             String[] cityTemp = ipUtil.getIp();
             Log.d("wodetian",cityTemp[1]);
-            String[] cityT = cityTemp[1].split("市");
+            String[] cityT = cityTemp[1].split("[市省]");
             Message msg = new Message();
             msg.what = 1;
-            if(cityT[0]==null){
-                cityT[0]="北京";
+            if(cityT[1]==null){
+                cityT[1]="北京";
             }
-            Log.d("motherfucker",cityT[0]);
-            msg.obj = cityT[0];
+            Log.d("motherfucker",cityT[1]);
+            msg.obj = cityT[1];
             handler.sendMessage(msg);
             Log.d("fuckt", "t1");
         } catch (IOException e) {
